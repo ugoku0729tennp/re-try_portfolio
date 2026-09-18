@@ -9,12 +9,12 @@
     content="width=device-width, initial-scale=1.0"
   >
 
+  <title>RE:TRY | Business Concept</title>
+
   <meta
     name="description"
-    content="RE:TRY｜人生の選択を、一発勝負から小さな実験へ。"
+    content="RE:TRY — 人生の選択を、一発勝負から小さな実験へ。"
   >
-
-  <title>RE:TRY | Business Concept</title>
 
   <style>
 
@@ -32,12 +32,14 @@
       font-family:
         -apple-system,
         BlinkMacSystemFont,
+        "Helvetica Neue",
         "Noto Sans JP",
+        Arial,
         sans-serif;
 
       color: #111;
       background: #fff;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
     a {
@@ -46,359 +48,353 @@
     }
 
     .container {
-      width: min(
-        calc(100% - 48px),
-        1100px
-      );
-
-      margin: 0 auto;
+      width: min(1100px, calc(100% - 48px));
+      margin: auto;
     }
 
-    .header {
-      height: 76px;
+    /* HEADER */
 
-      display: flex;
-      align-items: center;
-
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.94);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid #ddd;
     }
 
     .header-inner {
+      height: 70px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
+      font-size: 14px;
       font-weight: 800;
-      letter-spacing: .04em;
+      letter-spacing: .12em;
     }
 
     .back {
-      font-size: 12px;
-      font-weight: 700;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
     }
 
-    .hero {
-      padding: 150px 0;
+    /* HERO */
 
-      background: #111;
-      color: white;
+    .hero {
+      padding: 150px 0 130px;
+      border-bottom: 1px solid #ddd;
     }
 
     .label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .18em;
-
-      margin-bottom: 25px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .2em;
+      color: #777;
     }
 
     h1 {
-      font-size: clamp(48px, 8vw, 100px);
-      line-height: 1;
-
-      letter-spacing: -.06em;
-
-      margin-bottom: 35px;
+      margin-top: 30px;
+      font-size: clamp(55px, 9vw, 120px);
+      line-height: .95;
+      letter-spacing: -.07em;
     }
 
-    .hero p {
-      max-width: 700px;
-
-      font-size: 20px;
-      color: #aaa;
-    }
-
-    .section {
-      padding: 130px 0;
-    }
-
-    .gray {
-      background: #f6f6f4;
-    }
-
-    .section-title {
-      margin-bottom: 65px;
-    }
-
-    .section-title span {
-      display: block;
-
-      font-size: 11px;
+    .hero-lead {
+      margin-top: 45px;
+      font-size: clamp(20px, 3vw, 32px);
       font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .hero-note {
+      margin-top: 25px;
+      max-width: 700px;
+      color: #666;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 120px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .section-number {
+      font-size: 10px;
+      font-weight: 800;
       letter-spacing: .18em;
-
-      margin-bottom: 15px;
+      color: #777;
     }
 
-    .section-title h2 {
-      font-size: clamp(35px, 5vw, 60px);
-      line-height: 1.2;
-
+    h2 {
+      margin-top: 12px;
+      font-size: clamp(36px, 5vw, 64px);
       letter-spacing: -.05em;
+      line-height: 1;
     }
 
-    .problem-grid {
+    /* WHAT */
+
+    .two-column {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 100px;
+      margin-top: 70px;
     }
 
-    .problem {
-      padding: 40px;
-
-      border: 1px solid #ddd;
+    .large {
+      font-size: clamp(28px, 4vw, 48px);
+      font-weight: 700;
+      line-height: 1.35;
+      letter-spacing: -.04em;
     }
 
-    .problem strong {
-      display: block;
-
-      font-size: 20px;
-
-      margin-bottom: 15px;
+    .text p + p {
+      margin-top: 25px;
     }
 
-    .problem p {
-      font-size: 14px;
-      color: #555;
-    }
+    /* FLOW */
 
     .flow {
+      margin-top: 70px;
       display: grid;
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      border: 1px solid #ccc;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid #111;
+      border-left: 1px solid #111;
     }
 
     .flow-item {
+      padding: 35px;
       min-height: 240px;
-
-      padding: 30px;
-
-      border-right: 1px solid #ccc;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .flow-item:last-child {
-      border-right: none;
+      border-right: 1px solid #111;
+      border-bottom: 1px solid #111;
     }
 
     .flow-number {
-      font-size: 11px;
+      font-size: 10px;
+      font-weight: 800;
       color: #777;
     }
 
     .flow-item h3 {
-      font-size: 24px;
+      margin-top: 45px;
+      font-size: 21px;
     }
 
     .flow-item p {
-      font-size: 12px;
-      color: #666;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
     }
 
-    .ai-box {
-      padding: 50px;
+    /* AI */
 
+    .ai-box {
+      margin-top: 70px;
+      padding: 55px;
       background: #111;
-      color: white;
+      color: #fff;
     }
 
     .ai-box h3 {
       font-size: 30px;
-      margin-bottom: 20px;
     }
 
     .ai-box p {
-      color: #aaa;
-      max-width: 800px;
+      margin-top: 20px;
+      max-width: 750px;
+      color: rgba(255,255,255,.7);
     }
 
-    .model {
+    /* NUMBERS */
+
+    .numbers {
+      margin-top: 70px;
       display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(4,1fr);
+      border-top: 1px solid #111;
+    }
+
+    .number {
+      padding: 35px 25px;
+      border-right: 1px solid #111;
+    }
+
+    .number:last-child {
+      border-right: none;
+    }
+
+    .number strong {
+      display: block;
+      font-size: 48px;
+      line-height: 1;
+    }
+
+    .number span {
+      display: block;
+      margin-top: 15px;
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* BUSINESS */
+
+    .business-grid {
+      margin-top: 70px;
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
       gap: 20px;
     }
 
-    .model-card {
-      padding: 35px;
-
+    .business-card {
       border: 1px solid #ccc;
+      padding: 35px;
     }
 
-    .model-card .number {
-      font-size: 12px;
-      color: #777;
-    }
-
-    .model-card h3 {
-      margin: 30px 0 15px;
+    .business-card h3 {
       font-size: 21px;
     }
 
-    .model-card p {
-      font-size: 13px;
+    .business-card p {
+      margin-top: 15px;
+      font-size: 14px;
       color: #555;
     }
 
-    .kpi {
-      display: grid;
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      border-top: 1px solid #ccc;
-      border-left: 1px solid #ccc;
-    }
-
-    .kpi-item {
-      padding: 35px;
-
-      border-right: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .kpi-item strong {
-      display: block;
-
-      font-size: 42px;
-      line-height: 1;
-
-      margin-bottom: 15px;
-    }
-
-    .kpi-item span {
-      font-size: 12px;
-      color: #666;
-    }
+    /* ROADMAP */
 
     .roadmap {
-      position: relative;
-
-      display: grid;
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 20px;
-    }
-
-    .roadmap::before {
-      content: "";
-
-      position: absolute;
-
-      top: 16px;
-      left: 8%;
-      right: 8%;
-
-      height: 1px;
-
-      background: #ccc;
+      margin-top: 70px;
     }
 
     .roadmap-item {
-      position: relative;
-
-      padding-top: 55px;
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 50px;
+      padding: 35px 0;
+      border-top: 1px solid #ccc;
     }
 
-    .roadmap-dot {
-      position: absolute;
-
-      top: 10px;
-      left: 0;
-
-      width: 13px;
-      height: 13px;
-
-      border-radius: 50%;
-
-      background: #111;
-
-      z-index: 2;
+    .roadmap-period {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .1em;
     }
 
     .roadmap-item h3 {
-      font-size: 21px;
-      margin-bottom: 10px;
+      font-size: 24px;
     }
 
     .roadmap-item p {
-      font-size: 13px;
-      color: #666;
+      margin-top: 10px;
+      color: #555;
     }
 
-    .final {
-      padding: 150px 0;
+    /* STATUS */
 
+    .status {
+      background: #f5f5f3;
+    }
+
+    .status-box {
+      margin-top: 60px;
+      border: 2px solid #111;
+      padding: 50px;
+    }
+
+    .status-box h3 {
+      font-size: 30px;
+    }
+
+    .status-box p {
+      margin-top: 20px;
+      color: #555;
+    }
+
+    /* FOOTER */
+
+    footer {
       background: #111;
-      color: white;
+      color: #fff;
+      padding: 30px 0;
     }
 
-    .final h2 {
-      max-width: 900px;
-
-      font-size: clamp(40px, 6vw, 75px);
-      line-height: 1.2;
-
-      letter-spacing: -.05em;
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      font-size: 9px;
+      letter-spacing: .12em;
+      opacity: .6;
     }
+
+
+    /* RESPONSIVE */
 
     @media (max-width: 800px) {
 
+      .two-column {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .flow {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .numbers {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .number {
+        border-bottom: 1px solid #111;
+      }
+
+      .business-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .roadmap-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+    }
+
+
+    @media (max-width: 550px) {
+
       .container {
-        width: min(
-          calc(100% - 32px),
-          1100px
-        );
+        width: min(100% - 32px, 1100px);
       }
 
-      .hero {
-        padding: 100px 0;
-      }
-
-      .section {
+      section {
         padding: 90px 0;
       }
 
-      .problem-grid,
-      .model {
-        grid-template-columns: 1fr;
+      .hero {
+        padding: 110px 0 90px;
       }
 
       .flow {
         grid-template-columns: 1fr;
       }
 
-      .flow-item {
-        min-height: 170px;
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-      }
-
-      .flow-item:last-child {
-        border-bottom: none;
-      }
-
-      .kpi {
+      .numbers {
         grid-template-columns: 1fr 1fr;
       }
 
-      .roadmap {
-        grid-template-columns: 1fr;
+      .ai-box,
+      .status-box {
+        padding: 30px;
       }
 
-      .roadmap::before {
-        display: none;
-      }
-
-      .roadmap-item {
-        padding-top: 45px;
-        padding-left: 30px;
+      footer .container {
+        flex-direction: column;
+        gap: 8px;
       }
 
     }
@@ -410,24 +406,31 @@
 
 <body>
 
-  <header class="header">
 
-    <div class="container header-inner">
+<header>
 
-      <a href="../../../index.html" class="logo">
-        前田 栞那
-      </a>
+  <div class="container header-inner">
 
-      <a
-        href="../../../index.html#projects"
-        class="back"
-      >
-        ← Portfolio
-      </a>
+    <a
+      href="https://ugoku0729tennp.github.io/index.html#projects"
+      class="logo"
+    >
+      RE:TRY
+    </a>
 
-    </div>
+    <a
+      href="https://ugoku0729tennp.github.io/index.html#projects"
+      class="back"
+    >
+      ← BACK TO PORTFOLIO
+    </a>
 
-  </header>
+  </div>
+
+</header>
+
+
+<main>
 
 
   <!-- HERO -->
@@ -437,15 +440,67 @@
     <div class="container">
 
       <p class="label">
-        BUSINESS CONCEPT / RE:TRY
+        BUSINESS CONCEPT
       </p>
 
-      <h1>RE:TRY</h1>
+      <h1>
+        RE:TRY
+      </h1>
 
-      <p>
-        人生の選択を、一発勝負から<br>
-        「小さな実験」へ。
+      <p class="hero-lead">
+        人生の選択を、<br>
+        一発勝負から「小さな実験」へ。
       </p>
+
+      <p class="hero-note">
+        キャリア選択の前に、
+        小さな仕事・活動を実際に試せるサービス構想。
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHAT -->
+
+  <section>
+
+    <div class="container">
+
+      <p class="section-number">
+        01 / WHAT
+      </p>
+
+      <h2>
+        RE:TRYとは
+      </h2>
+
+
+      <div class="two-column">
+
+        <p class="large">
+          「選ぶ」前に、<br>
+          「試す」。
+        </p>
+
+        <div class="text">
+
+          <p>
+            進学や就職などの大きな選択を、
+            一度で決めるのではなく、
+            小さな体験を通して考え直せるようにする。
+          </p>
+
+          <p>
+            実際に仕事や活動を経験し、
+            その経験を振り返り、
+            次の選択に活かす。
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -454,32 +509,39 @@
 
   <!-- PROBLEM -->
 
-  <section class="section">
+  <section>
 
     <div class="container">
 
-      <div class="section-title">
-        <span>01 / PROBLEM</span>
-        <h2>選択肢がないのではなく、<br>試す機会がない。</h2>
-      </div>
+      <p class="section-number">
+        02 / PROBLEM
+      </p>
 
-      <div class="problem-grid">
+      <h2>
+        問題
+      </h2>
 
-        <div class="problem">
-          <strong>学生側</strong>
+      <div class="two-column">
+
+        <p class="large">
+          選択肢がないのではなく、<br>
+          選ぶ前に判断する材料が少ない。
+        </p>
+
+        <div class="text">
+
           <p>
-            仕事や活動について、実際に経験してから
-            自分に合うか判断する機会が限られている。
+            求人票や説明会だけでは、
+            実際の仕事内容や環境との相性を
+            判断することが難しい。
           </p>
-        </div>
 
-        <div class="problem">
-          <strong>企業・組織側</strong>
           <p>
-            学生との接点をつくりたい一方、
-            短期間で仕事を体験してもらう仕組みを
-            自社だけで設計するのは難しい。
+            その結果、
+            「入ってみないと分からない」
+            という状態で大きな選択をすることになる。
           </p>
+
         </div>
 
       </div>
@@ -491,39 +553,88 @@
 
   <!-- SERVICE -->
 
-  <section class="section gray">
+  <section>
 
     <div class="container">
 
-      <div class="section-title">
-        <span>02 / SERVICE</span>
-        <h2>選ぶ前に、試す。</h2>
-      </div>
+      <p class="section-number">
+        03 / SERVICE
+      </p>
+
+      <h2>
+        体験の流れ
+      </h2>
+
 
       <div class="flow">
 
         <div class="flow-item">
-          <span class="flow-number">01</span>
-          <h3>Explore</h3>
-          <p>興味のある領域を探す。</p>
+
+          <span class="flow-number">
+            01
+          </span>
+
+          <h3>
+            EXPLORE
+          </h3>
+
+          <p>
+            興味のある仕事・活動を探す。
+          </p>
+
         </div>
 
-        <div class="flow-item">
-          <span class="flow-number">02</span>
-          <h3>Try</h3>
-          <p>小さな仕事・活動を実際に体験する。</p>
-        </div>
 
         <div class="flow-item">
-          <span class="flow-number">03</span>
-          <h3>Reflect</h3>
-          <p>経験を振り返り、気づきを整理する。</p>
+
+          <span class="flow-number">
+            02
+          </span>
+
+          <h3>
+            TRY
+          </h3>
+
+          <p>
+            短期間・小さな単位で実際に体験する。
+          </p>
+
         </div>
 
+
         <div class="flow-item">
-          <span class="flow-number">04</span>
-          <h3>Update</h3>
-          <p>次に試すこと・選択条件を更新する。</p>
+
+          <span class="flow-number">
+            03
+          </span>
+
+          <h3>
+            REFLECT
+          </h3>
+
+          <p>
+            経験を振り返り、
+            自分なりの判断材料を整理する。
+          </p>
+
+        </div>
+
+
+        <div class="flow-item">
+
+          <span class="flow-number">
+            04
+          </span>
+
+          <h3>
+            UPDATE
+          </h3>
+
+          <p>
+            結果をもとに、
+            次に試すこと・選択肢を更新する。
+          </p>
+
         </div>
 
       </div>
@@ -535,24 +646,33 @@
 
   <!-- AI -->
 
-  <section class="section">
+  <section>
 
     <div class="container">
 
-      <div class="section-title">
-        <span>03 / AI</span>
-        <h2>AIは「答え」を決めない。</h2>
-      </div>
+      <p class="section-number">
+        04 / AI
+      </p>
+
+      <h2>
+        AIの使い方
+      </h2>
+
 
       <div class="ai-box">
 
-        <h3>経験を、次の選択に使える情報へ。</h3>
+        <h3>
+          AIに「向いている仕事」を決めさせない。
+        </h3>
 
         <p>
-          AIが「あなたはこの仕事に向いている」と
-          判断するのではなく、実際の体験や振り返りを整理し、
-          比較する視点や次の仮説を提示する。
-          最終的な判断は本人が行う。
+          実際の体験と振り返りを整理し、
+          比較するための視点や
+          次に試す仮説をつくるためにAIを使う。
+        </p>
+
+        <p>
+          最終的な選択は本人が行う。
         </p>
 
       </div>
@@ -562,99 +682,153 @@
   </section>
 
 
-  <!-- BUSINESS MODEL -->
+  <!-- MVP -->
 
-  <section class="section gray">
+  <section>
 
     <div class="container">
 
-      <div class="section-title">
-        <span>04 / BUSINESS MODEL</span>
-        <h2>学生は無料。<br>企業・組織から収益化。</h2>
+      <p class="section-number">
+        05 / MVP
+      </p>
+
+      <h2>
+        最初に検証すること
+      </h2>
+
+
+      <div class="numbers">
+
+        <div class="number">
+
+          <strong>20–30</strong>
+
+          <span>
+            学生インタビュー
+          </span>
+
+        </div>
+
+
+        <div class="number">
+
+          <strong>3</strong>
+
+          <span>
+            無料体験プロジェクト
+          </span>
+
+        </div>
+
+
+        <div class="number">
+
+          <strong>10+</strong>
+
+          <span>
+            参加者
+          </span>
+
+        </div>
+
+
+        <div class="number">
+
+          <strong>1–2</strong>
+
+          <span>
+            有料PoC
+          </span>
+
+        </div>
+
       </div>
 
-      <div class="model">
 
-        <div class="model-card">
-
-          <span class="number">01 / USER</span>
-
-          <h3>学生</h3>
-
-          <p>
-            小さな体験を無料で利用。
-            体験後の振り返りから次の行動につなげる。
-          </p>
-
-        </div>
-
-        <div class="model-card">
-
-          <span class="number">02 / PROVIDER</span>
-
-          <h3>企業・組織</h3>
-
-          <p>
-            学生向けの短期体験を提供。
-            採用・広報・人材接点として活用。
-          </p>
-
-        </div>
-
-        <div class="model-card">
-
-          <span class="number">03 / PAYER</span>
-
-          <h3>企業・大学等</h3>
-
-          <p>
-            体験設計・学生接点・データ活用などの
-            法人向けサービスとして収益化する。
-          </p>
-
-        </div>
-
-      </div>
+      <p
+        style="
+          margin-top:25px;
+          font-size:12px;
+          color:#777;
+        "
+      >
+        ※現時点のMVP検証目標。実績値ではありません。
+      </p>
 
     </div>
 
   </section>
 
 
-  <!-- KPI -->
+  <!-- BUSINESS MODEL -->
 
-  <section class="section">
+  <section>
 
     <div class="container">
 
-      <div class="section-title">
-        <span>05 / MVP KPI</span>
-        <h2>まず、需要を検証する。</h2>
+      <p class="section-number">
+        06 / BUSINESS MODEL
+      </p>
+
+      <h2>
+        ビジネスモデル
+      </h2>
+
+
+      <div class="business-grid">
+
+        <div class="business-card">
+
+          <h3>
+            学生
+          </h3>
+
+          <p>
+            体験・振り返りを無料で利用。
+          </p>
+
+        </div>
+
+
+        <div class="business-card">
+
+          <h3>
+            企業・団体
+          </h3>
+
+          <p>
+            体験機会の提供、
+            採用・人材育成・業務体験などで活用。
+          </p>
+
+        </div>
+
+
+        <div class="business-card">
+
+          <h3>
+            大学
+          </h3>
+
+          <p>
+            キャリア教育や学生支援の
+            体験プログラムとして活用。
+          </p>
+
+        </div>
+
       </div>
 
-      <div class="kpi">
 
-        <div class="kpi-item">
-          <strong>20–30</strong>
-          <span>学生インタビュー</span>
-        </div>
-
-        <div class="kpi-item">
-          <strong>3</strong>
-          <span>無料体験</span>
-        </div>
-
-        <div class="kpi-item">
-          <strong>10+</strong>
-          <span>体験参加者</span>
-        </div>
-
-        <div class="kpi-item">
-          <strong>1–2</strong>
-          <span>有料PoC</span>
-        </div>
-
-      </div>
+      <p
+        style="
+          margin-top:35px;
+          color:#777;
+          font-size:12px;
+        "
+      >
+        ※価格・課金方法は今後の検証項目。
+      </p>
 
     </div>
 
@@ -663,55 +837,84 @@
 
   <!-- ROADMAP -->
 
-  <section class="section gray">
+  <section>
 
     <div class="container">
 
-      <div class="section-title">
-        <span>06 / ROADMAP</span>
-        <h2>小さく検証して、<br>必要なら大きくする。</h2>
-      </div>
+      <p class="section-number">
+        07 / ROADMAP
+      </p>
+
+      <h2>
+        検証ロードマップ
+      </h2>
+
 
       <div class="roadmap">
 
         <div class="roadmap-item">
 
-          <div class="roadmap-dot"></div>
+          <div class="roadmap-period">
+            0–3 MONTHS
+          </div>
 
-          <h3>0–3ヶ月</h3>
+          <div>
 
-          <p>
-            学生インタビュー、体験設計、
-            MVP実施、有料PoCの検証。
-          </p>
+            <h3>
+              サービス検証
+            </h3>
 
-        </div>
+            <p>
+              学生インタビュー、
+              体験プロジェクト、
+              AI振り返りを実施。
+            </p>
 
-
-        <div class="roadmap-item">
-
-          <div class="roadmap-dot"></div>
-
-          <h3>4–12ヶ月</h3>
-
-          <p>
-            体験提供の仕組みを整備し、
-            サービスとして再現可能な形へ。
-          </p>
+          </div>
 
         </div>
 
 
         <div class="roadmap-item">
 
-          <div class="roadmap-dot"></div>
+          <div class="roadmap-period">
+            4–12 MONTHS
+          </div>
 
-          <h3>2年目以降</h3>
+          <div>
 
-          <p>
-            企業・大学・NPO等とのネットワークを構築し、
-            体験データを活用したプラットフォームへ。
-          </p>
+            <h3>
+              プロダクト化
+            </h3>
+
+            <p>
+              体験設計と振り返り機能を整理し、
+              継続利用できる仕組みにする。
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="roadmap-item">
+
+          <div class="roadmap-period">
+            YEAR 2+
+          </div>
+
+          <div>
+
+            <h3>
+              体験ネットワーク
+            </h3>
+
+            <p>
+              企業・大学・団体と体験機会を増やし、
+              選択のためのデータを蓄積する。
+            </p>
+
+          </div>
 
         </div>
 
@@ -722,24 +925,65 @@
   </section>
 
 
-  <!-- FINAL -->
+  <!-- STATUS -->
 
-  <section class="final">
+  <section class="status">
 
     <div class="container">
 
-      <p class="label">
-        CURRENT STATUS
+      <p class="section-number">
+        08 / CURRENT STATUS
       </p>
 
       <h2>
-        まずはサービスを作るのではなく、<br>
-        本当に必要とされるかを検証する。
+        現在地
       </h2>
+
+
+      <div class="status-box">
+
+        <h3>
+          まだ「事業」ではなく、検証段階。
+        </h3>
+
+        <p>
+          現在は、学生へのニーズ調査、
+          体験プロジェクトの設計、
+          AIを使った振り返り方法の検証を
+          優先している。
+        </p>
+
+        <p>
+          いきなりアプリを作るのではなく、
+          実際に人が参加する小さな実験から
+          事業として成立する条件を探る。
+        </p>
+
+      </div>
 
     </div>
 
   </section>
+
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <span>
+      RE:TRY
+    </span>
+
+    <span>
+      BUSINESS CONCEPT
+    </span>
+
+  </div>
+
+</footer>
 
 
 </body>
